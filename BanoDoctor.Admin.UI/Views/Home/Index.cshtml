@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Bano Doctor : Dashboard";
+}
+
+<environment include="Development">
+    <link href="~/css/extra.css" rel="stylesheet" />
+</environment>
+<environment include="Production">
+    <link href="~/css/extra.css" rel="stylesheet" />
+</environment>
+
+<section id="mainWrapper" class="clearfix main dashboard">
+    <div class="row">
+        <div class="col-xs-12">
+            @*@await Html.PartialAsync(Views._dashBoardTopCounterPartial, Model.DashBoardCounter)*@
+        </div>
+
+        <div class="col-sm-6 col-xs-12" id="dvFormSubmit">
+            @*@await Html.PartialAsync(Views._dashBoardQuickSearchPartial, Model.QuickClaimSearch)*@
+        </div>
+
+        
+
+        <div class="col-xs-12">
+            <fieldset class="fieldset">
+                <legend>Today Inquiry List</legend>
+                <div class="pad5">
+                    <div class="row">
+                        <div class="box sH">
+                            @*@await Html.PartialAsync(Views._dashBoardBatchFileUploadPartial, Model.BatchFileUploadStatus)*@
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="col-xs-12">
+            <fieldset class="fieldset">
+                <legend>Inquiry Converted To Client</legend>
+                <div class="pad5">
+                    <div class="row">
+                        <div class="box sH">
+                            @*@await Html.PartialAsync(Views._dashBoardMasterFileUploadPartial, Model.MasterDataFileUploadStatus)*@
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col-xs-12">
+            <fieldset class="fieldset">
+                <legend>New Request Details</legend>
+                <div class="pad5">
+                    <div class="row">
+                        <div class="box sH">
+                            @*@await Html.PartialAsync(Views._dashBoardQuickLinkPartial)*@
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+</section>
+
+<div class="right-nav main-dashboard">
+    <div class="draggableNav">
+        <ul>
+            <li><a asp-controller="Client" asp-action="ClientList" class="addmaster clientIco" title="Client/Pharmacy">Inquiry</a></li>
+            <li><a asp-controller="Formulary" asp-action="FormularyIndex" class="formularyIco" title="Formulary Data">Client</a></li>
+            @*<li><a asp-controller="DrugSearch" asp-action="Index" class="drugIco" title="Drug Listing">Drugs</a></li>*@
+            <li><a asp-controller="Report" asp-action="Index" class="reportsIco" title="Reports">Reports</a></li>
+            <li><a asp-controller="UserDetail" asp-action="Index" class="usersIco" title="Users">Users</a></li>
+          @*  <li><a asp-controller="ClaimTest" asp-action="Index" class="claimIco" title="Test Claim">Test Claim</a></li>*@
+        </ul>
+    </div>
+</div>
+
+<environment include="Development">
+    <script src="~/js/DashBoard/DashBoard.js"></script>
+</environment>
+
+<environment include="Production">
+    <script src="~/js/DashBoard/DashBoard.js"></script>
+</environment>

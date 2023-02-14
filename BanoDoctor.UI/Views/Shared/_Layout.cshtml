@@ -15,6 +15,28 @@
     <link href="~/assets/dist/css/style.css" rel="stylesheet">
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <style>
+
+        .buttonload {
+            background-color: #04AA6D; /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 12px 24px; /* Some padding */
+            font-size: 16px; /* Set a font-size */
+        }
+
+        /* Add a right margin to each icon */
+        .fa {
+            margin-left: -12px;
+            margin-right: 8px;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -22,8 +44,8 @@
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
 
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/image/logo.png" class="logo">
+                <a class="navbar-brand" asp-action="Index" asp-controller="Home">
+                    <img src="~/assets/image/logo.png" class="logo">
                     <span class="color-green"><strong>Bano Doctor</strong></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,13 +54,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-1">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a id="linkHome" class="nav-link active link" aria-current="page" aasp-action="Index" asp-controller="Home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <a id="linkAboutUs" class="nav-link link" asp-action="Index" asp-controller="AboutUs">About Us</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Courses
                             </a>
                             <ul class="dropdown-menu">
@@ -50,12 +72,15 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
+                            <a id="LinkService" class="nav-link link" asp-action="Index" asp-controller="Service">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="linkContactUs" class="nav-link link" asp-action="Index" asp-controller="ContactUs">Contact Us</a>
                         </li>
                     </ul>
 
 
-                    <form class="d-flex p-2" role="Search here ">
+                    <form class="d-flex p-2" role="Search here">
                         <input class="form-control search-input" type="search" placeholder="Search here" aria-label="Search here">
                         <button class="btn custom-btn-search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
@@ -109,7 +134,7 @@
             </div>
         </nav>
     </div>
-        @RenderBody()
+    @RenderBody()
 
     <!-- Footer -->
     <footer class="text-lg-start text-muted footer-section ">
@@ -257,9 +282,17 @@
     </footer>
     <!-- Footer -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ajax-unobtrusive@3.2.6/dist/jquery.unobtrusive-ajax.min.js"
+            integrity="sha256-PAC000yuHt78nszJ2RO0OiDMu/uLzPLRlYTk8J3AO10="
+            crossorigin="anonymous"></script>
 
     <script src="~/assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/Custom.js" async></script>
     <script>
 
         var locations = [
@@ -290,8 +323,10 @@
         }
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+
+    <link href="~/AlertifyJs/build/css/alertify.css" rel="stylesheet" />
+    <script src="~/AlertifyJs/build/alertify.js"></script>
 
 </body>
 

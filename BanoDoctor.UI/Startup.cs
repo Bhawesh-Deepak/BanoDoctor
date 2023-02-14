@@ -1,3 +1,5 @@
+using BanoDoctor.UI.Service;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -7,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace BanoDoctor.UI
@@ -23,6 +26,8 @@ namespace BanoDoctor.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient(typeof(IRepository<>), typeof(Implementation<>));
+            services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddControllersWithViews();
         }
 

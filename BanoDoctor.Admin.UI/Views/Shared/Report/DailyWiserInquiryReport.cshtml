@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BanoDoctor.Admin.UI.Domains.InquiryModel>
+
+    <section class="content">
+
+        <div class="row">
+            <table id="CmsTableReport" class="table table-striped table-bordered responsive" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Candidate Name</th>
+                        <th>Candidate Phone</th>
+                        <th>Candidate Email</th>
+                        <th>Selected Course</th>
+                        <th>Message</th>
+                        <th>Inquiry Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var data in Model)
+                    {
+                        <tr>
+                            <td>@data.CandidateName</td>
+                            <td>@data.CandidatePhone</td>
+                            <td>@data.CandidateEmail</td>
+                            <td>@data.SelectedCourse</td>
+                            <td>@data.Message</td>
+                            <td>@data.CreatedDate</td>
+                            <td>
+                                <button onclick="DeleteRecords(@data.Id)">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+
+                                <a asp-action="CreateEmployee" asp-controller="Employee" asp-route-id="@data.Id">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </section>
+    <script>
+        $(document).ready(function () {
+            $('#CmsTableReport').DataTable();
+        });
+
+
+    </script>

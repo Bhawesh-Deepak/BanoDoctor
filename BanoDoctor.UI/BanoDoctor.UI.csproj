@@ -16,8 +16,6 @@
   <ItemGroup>
     <Folder Include="CQRS\Commands\" />
     <Folder Include="CQRS\Handler\" />
-    <Folder Include="CQRS\Queries\" />
-    <Folder Include="DomainModel\" />
     <Folder Include="Service\" />
   </ItemGroup>
 

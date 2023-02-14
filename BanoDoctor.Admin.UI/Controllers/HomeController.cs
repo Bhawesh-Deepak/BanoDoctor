@@ -1,4 +1,6 @@
-﻿using BanoDoctor.Admin.UI.Models;
+﻿using BanoDoctor.Admin.UI.CQRS.Queries;
+using BanoDoctor.Admin.UI.Models;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,26 +14,24 @@ namespace BanoDoctor.Admin.UI.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IMediator _IMedidator;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IMediator mediator)
         {
-            _logger = logger;
+            _IMedidator = mediator;
         }
-
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> GetTodayInquirtyList()
         {
-            return View();
+            var response = await _IMedidator.Send(new GetInquiryQuery() 
+            { StartDate = DateTime.Now, EndDate = DateTime.Now });
+
+            return PartialView("~/Views/Shared/Report/DailyWiserInquiryReport.cshtml", response);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

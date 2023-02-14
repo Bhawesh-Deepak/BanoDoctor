@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    @*<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>*@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link href="~/css/AlertConfirm.css" rel="stylesheet" />
 
@@ -24,7 +24,7 @@
             <div class="header-left">
                 <figure class="logo" style="background-color: #f2f2f2">
 
-                    <a href="#">
+                    <a asp-action="Index" asp-controller="Home">
                         <img src="~/images/logo.png" />
                     </a>
 
@@ -54,7 +54,7 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li><a asp-action="Index" asp-controller="UserDetail" class="admin">User Management <em></em></a></li>
-                            <li><a asp-action="Index" asp-controller="Utilities" class="utilities">Utilities <em></em></a></li>
+                            <li><a asp-action="Index" asp-controller="Blog" class="utilities">Blog <em></em></a></li>
 
                         </ul>
                     </div>
@@ -66,8 +66,8 @@
             <nav>
                 <ul>
                     <li class="dashboard">
-                        <a data-title="utilities" asp-controller="Index" asp-action="Home">
-                            <span>utilities  </span>
+                        <a data-title="Blogs" asp-controller="Blog" asp-action="Index">
+                            <span>Blogs  </span>
                         </a>
                     </li>
                 </ul>
@@ -115,35 +115,42 @@
             integrity="sha256-PAC000yuHt78nszJ2RO0OiDMu/uLzPLRlYTk8J3AO10="
             crossorigin="anonymous"></script>
     <script src="~/js/jquery.plugins.js"></script>
-    <script src="~/js/custom.js"></script>
-    <script src="~/js/jquery.mask.js"></script>
+        <script src="~/js/custom.js"></script>
+        <script src="~/js/jquery.mask.js"></script>
     <script src="~/js/Layout.js"></script>
     <script src="~/js/THSComman.js"></script>
     <link href="~/css/PaggingSorting.css" rel="stylesheet" />
-    <script src="~/js/CustomJqGrid/JqGridTable.js"></script>
-    <script src="~/js/HighChart/highcharts.js"></script>
-    <script src="~/js/HighChart/highcharts-more.js"></script>
-    <script src="~/js/HighChart/exporting.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    @*<script src="~/js/CustomJqGrid/JqGridTable.js"></script>
+        <script src="~/js/HighChart/highcharts.js"></script>
+        <script src="~/js/HighChart/highcharts-more.js"></script>
+        <script src="~/js/HighChart/exporting.js"></script>*@
 </environment>
 <environment include="Production">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="~/js/AlertConfirm.js"></script>
+
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-ajax-unobtrusive@3.2.6/dist/jquery.unobtrusive-ajax.min.js"
             integrity="sha256-PAC000yuHt78nszJ2RO0OiDMu/uLzPLRlYTk8J3AO10="
             crossorigin="anonymous"></script>
     <script src="~/js/jquery.plugins.js"></script>
-    <script src="~/js/custom.js"></script>
-    <script src="~/js/jquery.mask.js"></script>
+        <script src="~/js/custom.js"></script>
+        <script src="~/js/jquery.mask.js"></script>
     <script src="~/js/Layout.js"></script>
     <script src="~/js/THSComman.js"></script>
     <link href="~/css/PaggingSorting.css" rel="stylesheet" />
-    <script src="~/js/CustomJqGrid/JqGridTable.js"></script>
-    <script src="~/js/HighChart/highcharts.js"></script>
-    <script src="~/js/HighChart/highcharts-more.js"></script>
-    <script src="~/js/HighChart/exporting.js"></script>
+    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    @*<script src="~/js/CustomJqGrid/JqGridTable.js"></script>
+        <script src="~/js/HighChart/highcharts.js"></script>
+        <script src="~/js/HighChart/highcharts-more.js"></script>
+        <script src="~/js/HighChart/exporting.js"></script>*@
 
 </environment>
 

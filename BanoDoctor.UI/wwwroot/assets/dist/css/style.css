@@ -61,17 +61,15 @@ h6 {
     /*margin-left: -70%;*/
     width: 100%;
 
-    background-image: linear-gradient(to right, #c6ffdd04, #fbbd8600, #06d1ff);
-    /* background-image: url("../../slider/slider-image-for-removebg-preview.png"); */
-    /* height: 500px; */
-    background-repeat: no-repeat;
-    /* background-size: 100%; */
-    border: 1px rgb(234, 66, 71);
+    background-image: linear-gradient(to right, #fff, #ffffffb6, #06d1ff00);
+
+    height: 100%;
 
 }
 
 .banner-content {
-    padding: 5.5rem 1rem 0;
+    height: 850px;
+    padding: 5.5rem 5.5rem 0;
 }
 
 .banner-title,
@@ -748,4 +746,40 @@ a {
     color: #fff;
     padding: .3rem;
 
+}
+
+.contact-box {
+    margin: 2.5rem 0 2.5rem 0;
+
+    border-top: .3rem solid #0acaec;
+
+
+}
+
+.hero-section .section-overlay {
+    height: 20rem;
+
+}
+
+.hero-title {
+    padding: 9.5rem 0 0 0;
+}
+
+
+.videoembed {
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+
+    z-index: -1;
+    height: 100%;
+
+    width: 100%;
+
+
+}
+
+.banner-content-section {
+    position: absolute;
 }

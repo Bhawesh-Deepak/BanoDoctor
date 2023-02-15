@@ -901,3 +901,17 @@ a {
     padding: 3.5rem 0 3.5rem 0;
     background-color: #0acaec1f;
 }
+
+.fa-brands {
+    padding: .25rem;
+
+    background-color: #0acaec;
+    color: white;
+    border-radius: .5rem;
+
+    text-align: center;
+    font-size: 0.95rem;
+    width: 1.5rem;
+
+
+}

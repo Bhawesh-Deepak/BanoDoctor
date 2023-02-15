@@ -11,9 +11,12 @@ h2,
 h3 {
 
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 3.3rem;
     text-transform: capitalize;
     padding: 1rem 0 1rem 0;
+    font-family: 'Fs Albert Arabic Bold';
+
+
 }
 
 h4,
@@ -22,6 +25,7 @@ h6 {
     font-weight: 600;
     font-size: 1.5rem;
     text-transform: capitalize;
+    font-family: 'Fs Albert Arabic Bold';
 
 
 }
@@ -76,6 +80,7 @@ h6 {
 .banner-paragraph,
 .action-section {
     padding: 1rem;
+
 }
 
 .custom-btn {
@@ -98,6 +103,7 @@ h6 {
 
 .card-title {
     text-align: center;
+    font-family: 'Fs Albert Arabic Bold';
     /*padding: .5rem 0 .5rem 0;*/
 }
 
@@ -597,7 +603,7 @@ a {
 .title {
     font-size: 1.5rem;
     color: rgb(10, 212, 239);
-    font-weight: 750;
+    font-family: 'Fs Albert Arabic Bold';
 }
 
 .work-flow {
@@ -677,6 +683,8 @@ a {
 
 
 }
+
+
 
 .content-box {
 
@@ -902,7 +910,9 @@ a {
     background-color: #0acaec1f;
 }
 
-.fa-brands {
+
+.fa-brands,
+.fas {
     padding: .25rem;
 
     background-color: #0acaec;
@@ -912,6 +922,23 @@ a {
     text-align: center;
     font-size: 0.95rem;
     width: 1.5rem;
+    margin: 0 0.25rem 0 .25rem;
 
 
+}
+
+.fa-brands:hover {
+
+    background-color: rgb(234, 66, 71);
+
+}
+
+
+.footer-section .social-media-links {
+    padding: .75rem 0 .75rem 0;
+    border-top: .5px solid #2EA2DB;
+    border-bottom: .5px solid #2EA2DB;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1rem;
 }

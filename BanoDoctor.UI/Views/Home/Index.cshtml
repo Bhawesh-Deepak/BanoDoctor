@@ -664,74 +664,118 @@
 
         <!-- End of states -->
         <!-- Latest Blog Section -->
-        @(await Component.InvokeAsync("BlogComponent"))
+    @(await Component.InvokeAsync("BlogComponent"))
         <!--end of Blog  section -->
 
-        <div class="section mt-5 contact-section">
+      <!-- Client Carousel -->
 
-            <div class="container-fluid  section-overlay">
-                <div class="row">
-                    <div class="col-md-6 contact-form">
+<div class="section mt-5 client-section">
 
-                        <h1 class="color-white">Get in touch if have any query</h1>
-                        <form method="post" data-ajax="true" data-ajax-method="post"
-                              asp-action="CreateInquiry" asp-controller="ContactUs" data-ajax-begin="AjaxBeginMethod()" data-ajax-success="Success">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input asp-for="CandidateName" class="form-control" placeholder="Enter Your Full Name">
-                                        <span asp-validation-for="CandidateName" style="color:white"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input asp-for="CandidateEmail" class="form-control" placeholder="Enter Your Email ID">
-                                        <span asp-validation-for="CandidateEmail" style="color:white"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input asp-for="CandidatePhone" class="form-control" placeholder="Enter Your Mobile Number">
-                                        <span asp-validation-for="CandidatePhone" style="color:white"></span>
-                                    </div>
-                                </div>
+<div class="container-fluid ">
+ <h3 class="color-blue text-center">Top Universities</h3>
 
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input asp-for="SelectedCourse" class="form-control" placeholder="Select Course You are Interested">
-                                        <span asp-validation-for="SelectedCourse" style="color:white"></span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control" asp-for="Message" rows="5" placeholder="Write Your Message Here"></textarea>
-                                        <span asp-validation-for="Message" style="color:white"></span>
-                                    </div>
+<div class="customer-logos slider pt-5 pb-5">
+      <div class="slide"><img src="assets/logo/logo-1.png"></div>
+      <div class="slide"><img src="assets/logo/logo-2.png"></div>
+      <div class="slide"><img src="assets/logo/logo-3.png"></div>
+      <div class="slide"><img src="assets/logo/logo-4.png"></div>
+      <div class="slide"><img src="assets/logo/logo-5.png"></div>
+      <div class="slide"><img src="assets/logo/logo-6.png"></div>
+      <div class="slide"><img src="assets/logo/logo-7.png"></div>
+      <div class="slide"><img src="assets/logo/logo-8.png"></div>
+      <div class="slide"><img src="assets/logo/logo-9.png"></div>
+      <div class="slide"><img src="assets/logo/logo-10.png"></div>
+      <div class="slide"><img src="assets/logo/logo-11.png"></div>
+      <div class="slide"><img src="assets/logo/logo-12.png"></div>
+      <div class="slide"><img src="assets/logo/logo-13.png"></div>
+      <div class="slide"><img src="assets/logo/logo-14.png"></div>
+      <div class="slide"><img src="assets/logo/logo-18.png"></div>
+      <div class="slide"><img src="assets/logo/logo-16.png"></div>
 
 
-                                </div>
 
-                                <div class="action-btn">
+</div>
+</div>
+</div>
+<!--End of Client Carousel-->
 
-                                    <button type="submit" class="btn custom-btn "> Submit </button>
+
+<!-- Contact Section Start -->
+
+
+<div class="section contact-section">
+
+<div class="container-fluid  section-overlay">
+<div class="row">
+<div class="col-md-6 contact-form">
+
+<h1 class="color-white">Get in touch if have any query</h1>
+<form method="post" data-ajax="true" data-ajax-method="post"
+                          asp-action="CreateInquiry" asp-controller="ContactUs" data-ajax-begin="AjaxBeginMethod()" data-ajax-success="Success">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="CandidateName" class="form-control" placeholder="Enter Your Full Name">
+                                    <span style="color:red" asp-validation-for="CandidateName"></span>
                                 </div>
                             </div>
-                        </form>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="CandidateEmail" class="form-control" placeholder="Enter Your Email ID">
+                                    <span style="color:red" asp-validation-for="CandidateEmail"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="CandidatePhone" class="form-control" placeholder="Enter Your Mobile Number">
+                                    <span style="color:red" asp-validation-for="CandidatePhone"></span>
+                                </div>
+                            </div>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 news-section">
-                <ul class="">
-                    <li>
-                    </li>
-                </ul>
-            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="SelectedCourse" class="form-control" placeholder="Select Course You are Interested">
+                                    <span style="color:red" asp-validation-for="SelectedCourse"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea asp-for="Message" class="form-control" rows="5" placeholder="Write Your Message Here"></textarea>
+                                    <span style="color:red" asp-validation-for="Message"></span>
+                                </div>
 
 
-        </div>
+                            </div>
+
+                            <div class="action-btn">
+
+                                <button id="btnSubmit" type="submit" class="btn custom-btn"> Submit </button>
+                                <button id="btnSubmitLoading" style="display:none" class="btn custom-btn buttonload">
+                                    <i class="fa fa-refresh fa-spin"></i>Loading...
+                                </button>
+
+
+                            </div>
+                        </div>
+                    </form>
+
+</div>
+</div>
+</div>
+<div class="col-md-6 news-section">
+<ul class="">
+<li>
+</li>
+</ul>
+</div>
+
+
+</div>
 
 
 
-    </div>
+</div>
+</div>
+</div>
+<!--- End Of Contact Section -->

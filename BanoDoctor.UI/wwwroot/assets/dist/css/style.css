@@ -234,11 +234,17 @@ h6 {
     scale: 1.01;
 }
 
+.footer-nav ul {
+    width: 100%;
+}
+
 .footer-nav li {
 
     list-style: none;
-    font-family: arial;
-    font-size: 1rem;
+
+
+
+
 
 
 }
@@ -249,11 +255,22 @@ h6 {
 
     float: left;
     display: block;
-    padding: .2rem;
-    font-weight: 600;
     width: 100%;
-    color: rgb(66, 165, 253);
+    color: rgba(0, 0, 0, 0.5);
+    font-size: .95rem;
+    padding: .35rem 1rem .35rem 1rem;
+    font-weight: 500;
+    border-top: .095rem solid #0acaec;
 
+
+
+
+
+}
+
+.footer-nav li a:hover {
+    background-color: #0acaec;
+    color: #fff;
 }
 
 .fas {
@@ -267,7 +284,7 @@ h6 {
 
 a {
     text-decoration: none;
-    font-size: 1.2rem;
+
 }
 
 

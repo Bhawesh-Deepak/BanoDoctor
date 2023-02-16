@@ -10,7 +10,7 @@
                 </ul>
             </div>
 
-            <a data-ref="10" class="btn btn-default addBtnTop" onclick="userDetail.fn_AddUser()">Blog Details</a>
+            <a data-ref="10" class="btn btn-default addBtnTop" asp-action="Index" asp-controller="Blog">Create Blog</a>
 
         </div>
     </nav>
@@ -36,28 +36,36 @@
                                                 <th>Created By</th>
                                                 <th>Is Published</th>
                                                 <th>CreatedDate</th>
+                                                <th>Meta Title</th>
+                                                <th>Meta Description</th>
+                                                <th>Meta Link</th>
+                                                <th>Meta Keywords</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach (var data in Model)
                                             {
-                                                <tr>
-                                                    <td>@data.Heading</td>
-                                                    <td>@Html.Raw(data.BlogDescription)</td>
-                                                    <td>@data.CreatedBy</td>
-                                                    <td>@data.Ispublished</td>
-                                                    <td>@data.CreatedDate</td>
-                                                    <td>
-                                                        <button onclick="DeleteRecords(@data.Id)">
-                                                            <i class="fa fa-trash"></i>
-                                                        </button>
+                                            <tr>
+                                                <td>@data.Heading</td>
+                                                <td>@Html.Raw(data.BlogDescription)</td>
+                                                <td>@data.CreatedBy</td>
+                                                <td>@data.Ispublished</td>
+                                                <td>@data.CreatedDate</td>
+                                                <td>@data.MetaTitle</td>
+                                                <td>@data.MetaDescription</td>
+                                                <td>@data.MetaLink</td>
+                                                <td>@data.MetaKeywords</td>
+                                                <td>
+                                                    <button onclick="DeleteRecords(@data.Id)">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
 
-                                                        <a asp-action="CreateEmployee" asp-controller="Employee" asp-route-id="@data.Id">
-                                                            <i class="fa fa-pencil"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
+                                                    <a asp-action="CreateEmployee" asp-controller="Employee" asp-route-id="@data.Id">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
                                             }
                                         </tbody>
                                     </table>

@@ -1,6 +1,9 @@
 ﻿var commanAjax = {
     "AjaxSuccess": function (response) {
         commanAjax.Fn_CommanAlert(response, 'Alert!');
+        setTimeout(() => {
+            location.reload();
+        }, 1500)
     },
    
     "Fn_AjaxBegin": function (divId) {

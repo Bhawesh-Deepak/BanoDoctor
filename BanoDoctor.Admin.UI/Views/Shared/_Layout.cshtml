@@ -16,7 +16,7 @@
     @*<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>*@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link href="~/css/AlertConfirm.css" rel="stylesheet" />
-
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
     <section class="main-wrap ajaxLoading" id="mainWrap">
@@ -44,7 +44,7 @@
                         <ul class="dropdown-menu">
                             <li><label class="clearMenuLocalStrg userName">Welcome <span>Super Admin </span></label></li>
                             <li><a href="javascript:void(0)" onclick="OpenChangePasswordPartial()" class="password">Change Password<em></em></a></li>
-                            <li><a class="logout" asp-action="LogOut" asp-controller="Authenticate">Log Out</a></li>
+                            <li><a class="logout" asp-action="LogOut" asp-controller="Authentication">Log Out</a></li>
                         </ul>
                     </div>
 
@@ -68,6 +68,16 @@
                     <li class="dashboard">
                         <a data-title="Blogs" asp-controller="Blog" asp-action="Index">
                             <span>Blogs  </span>
+                        </a>
+                    </li>
+                    <li class="dashboard">
+                        <a data-title="Course" asp-controller="Course" asp-action="Index">
+                            <span>Course  </span>
+                        </a>
+                    </li>
+                    <li class="dashboard">
+                        <a data-title="Upload Candidate" asp-controller="UploadCandidateDetail" asp-action="Index">
+                            <span>Upload Candidate  </span>
                         </a>
                     </li>
                 </ul>

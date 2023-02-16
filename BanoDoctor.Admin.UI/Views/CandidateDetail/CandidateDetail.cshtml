@@ -1,0 +1,99 @@
+﻿@model BanoDoctor.Admin.UI.Domains.CandidateDetailModel
+
+
+<div class="modal-header">
+    <div class="pull-left" style="width:50%">
+        <h4 class="modal-title" id="divClaimHeaderId">Candidate Details (@Model.CandidateName (@Model.ApplicationNumber))</h4>
+    </div>
+    <div class="pull-right text-right" style="width:50%">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+    </div>
+</div>
+<div class="modal-body">
+    <div class="modalBodyScroll">
+        <div class="padR5">
+            <div class="row">
+                
+
+             
+                <div class="col-xs-12">
+                    <fieldset class="fieldset">
+                        <legend>Candidate Information</legend>
+                        <div class="pad5">
+                            <table class="table-td-2 vt" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td class=""><strong>Roll Code:</strong></td>
+                                        <td><span class="value">@Model.RollCode</span></td>
+                                        <td class=""><strong>RLRW:</strong></td>
+                                        <td><span class="value">@Model.RLRW</span></td>
+                                        <td class=""><strong>Application #:</strong></td>
+                                        <td><span class="value">@Model.ApplicationNumber</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class=""><strong>Candidate Name:</strong></td>
+                                        <td><span class="value">@Model.CandidateName</span></td>
+                                        <td class=""><strong>Mother Name:</strong></td>
+                                        <td><span class="value">@Model.MotherName</span></td>
+                                        <td class=""><strong>Father Name:</strong></td>
+                                        <td><span class="value">@Model.FatherName</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class=""><strong>Status Code:</strong></td>
+                                        <td><span class="value">@Model.StatusCode</span></td>
+                                        <td class=""><strong>Mobile#:</strong></td>
+                                        <td><span class="value">@Model.MobileNumber</span></td>
+                                        <td class=""><strong>Nationality:</strong></td>
+                                        <td><span class="value">@Model.Nationality</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class=""><strong>Date of Birth:</strong></td>
+                                        <td><span class="value">@Model.DateOfBirth</span></td>
+                                        <td class=""><strong>Gender:</strong></td>
+                                        <td><span class="value">@Model.Gender</span></td>
+                                        <td class=""><strong>Category Name:</strong></td>
+                                        <td><span class="value">@Model.CategoryName</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class=""><strong>PH:</strong></td>
+                                        <td><span class="value">@Model.PH</span></td>
+                                        <td class=""><strong>Total:</strong></td>
+                                        <td><span class="value">@Model.Total</span></td>
+                                        <td class=""><strong>NEET Rank:</strong></td>
+                                        <td><span class="value">@Model.NEETRank</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class=""><strong>NEET_CAT_RANK:</strong></td>
+                                        <td><span class="value">@Model.NEET_CAT_RANK</span></td>
+                                        <td class=""><strong>App State:</strong></td>
+                                        <td><span class="value">@Model.APPState</span></td>
+                                        <td class=""><strong>App State N:</strong></td>
+                                        <td><span class="value">@Model.AppState_N</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class=""><strong>Center Number:</strong></td>
+                                        <td colspan="5"><span class="value">@Model.CenterNumber</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <div class="row">
+        <div class="col-md-2">
+            <button type="button" class="btn btn-secondary pull-right" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>

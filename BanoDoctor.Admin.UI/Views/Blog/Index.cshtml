@@ -27,7 +27,7 @@
                             </div>
 
                             <div class="col-xs-12" id="divUserList">
-                                <form asp-controller="Blog"  data-ajax-success="commanAjax.AjaxSuccess" data-ajax-begin="commanAjax.Fn_AjaxBegin('divUserList')"
+                                <form asp-controller="Blog" enctype="multipart/form-data"  data-ajax-success="commanAjax.AjaxSuccess" data-ajax-begin="commanAjax.Fn_AjaxBegin('divUserList')"
           data-ajax-complete="commanAjax.Fn_AjaxComplete('divUserList')" asp-action="CreateBlog" method="post" data-ajax="true" data-ajax-method="post" >
                                     <div class="modal-body">
 
@@ -41,9 +41,33 @@
                                                 <label class="control-label"><em>* </em>Heading</label>
                                                 <input asp-for="Heading" class="form-control" />
                                             </div>
+                                            <div class="col-xs-3 form-group">
+                                                <label class="control-label"><em>* </em>Meta Title</label>
+                                                <input asp-for="MetaTitle" class="form-control" />
+                                            </div>
+                                            <div class="col-xs-3 form-group">
+                                                <label class="control-label"><em>* </em>Meta Description</label>
+                                                <input asp-for="MetaDescription" class="form-control" />
+                                            </div>
+                                            <div class="col-xs-3 form-group">
+                                                <label class="control-label"><em>* </em>Meta Keywords</label>
+                                                <input asp-for="MetaKeywords" class="form-control" />
+                                            </div>
+                                            <div class="col-xs-3 form-group">
+                                                <label class="control-label"><em>* </em>Meta Link</label>
+                                                <input asp-for="MetaLink" class="form-control" />
+                                            </div>
+                                            <div class="col-xs-3 form-group">
+                                                <label class="control-label"><em>* </em>Image Alt Tag</label>
+                                                <input asp-for="ImageAltTage" class="form-control" />
+                                            </div>
+                                            <div class="col-xs-3 form-group">
+                                                <label class="control-label"><em>* </em>Image Path</label>
+                                                <input type="file" asp-for="UploadImage" class="form-control" />
+                                            </div>
                                             <div class="col-xs-12 form-group">
                                                 <label class="control-label"><em>* </em>Blog Details</label>
-                                                <textarea asp-for="BlogDescription"  class="form-control ckeditor"></textarea>
+                                                <textarea asp-for="BlogDescription" class="form-control ckeditor"></textarea>
                                             </div>
                                         </div>
 

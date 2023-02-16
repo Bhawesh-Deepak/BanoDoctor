@@ -1,0 +1,94 @@
+﻿@model BanoDoctor.Admin.UI.Domains.UserModel
+
+@{
+    ViewBag.Title = "Bano Doctor : Login Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bano Doctor : Login </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="~/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="~/images/logo.png" />
+    <link href="~/css/AlertConfirm.css" rel="stylesheet" />
+    <title>Bano Doctor</title>
+
+
+    <environment include="Development">
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        <script src="~/js/AlertConfirm.js"></script>
+        <script src="~/js/jquery.plugins.js"></script>
+        <script src="~/js/custom.js"></script>
+        <script src="~/js/THSComman.js"></script>
+        <script src="~/js/UserManagement/Authenticate.js"></script>
+    </environment>
+
+    <environment include="Production">
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        <script src="~/js/AlertConfirm.js"></script>
+        <script src="~/js/jquery.plugins.js"></script>
+        <script src="~/js/custom.js"></script>
+        <script src="~/js/THSComman.js"></script>
+        <script src="~/js/UserManagement/Authenticate.js"></script>
+    </environment>
+</head>
+<body>
+
+    <section class="main-wrap" id="dvFormSubmit">
+        <div class="flex-login">
+            <div class="login-box">
+
+                <div class="brand">
+                    <img src="~/images/logo.png" alt="Bano Doctor Login" />
+                    <br />
+                    <h4>Bano Doctor Admin Login</h4>
+                </div>
+
+                <form asp-action="Authenticate" asp-controller="Authentication" asp-route-returnurl="@ViewData["ReturnUrl"]">
+                    <div class="login-body" id="_divLoginBody">
+                        @*@if (!string.IsNullOrEmpty(ViewBag.message))
+                        {
+                            <div class="c-red loginMsg" id="dvErrorMsg">@ViewBag.message</div>
+                        }*@
+                        <div class="form-group">
+                            <label class="control-label">User Name</label>
+                            <input type="text" asp-for="UserName" autocomplete="off" autofocus maxlength="20" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Password</label>
+                            <input asp-for="Password" maxlength="20" class="form-control" />
+                        </div>
+
+
+                        <div class="form-group submit-wrap">
+                            <input type="submit" value="Login" class="btn btn-default clsGo" tabindex="3" />
+                            <a href="#" onclick="authenticate.fn_ForgetPassword()" tabindex="4">Forgot Password</a>
+                        </div>
+                    </div>
+                </form>
+                <div id="_divForgetPassword" class="login-body forgotBody" style="display: none">
+                </div>
+                <footer class="login-footer" id="_divFooter">
+                    <p>Copyright &copy; @DateTime.Now.Year Bano Doctor Company All rights reserved.</p>
+                </footer>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" style="z-index:99999" id="myModelAlert" role="dialog"></div>
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 ﻿using BanoDoctor.Admin.UI.Domains;
 using BanoDoctor.Admin.UI.Service;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,10 +15,11 @@ namespace BanoDoctor.Admin.UI.Controllers
     public class BlogApiController : ControllerBase
     {
         private readonly IRepository<BlogDetails> _IBlogRepository;
-
+       
         public BlogApiController(IRepository<BlogDetails> blogRepo)
         {
             _IBlogRepository = blogRepo;
+         
         }
 
         [HttpGet]

@@ -234,49 +234,66 @@ h6 {
     scale: 1.01;
 }
 
-.footer-nav ul {
+.footer-nav ul,
+li {
     width: 100%;
-}
-
-.footer-nav li {
-
     list-style: none;
+    font-weight: 600;
+    color: #bdbaba;
+}
+
+.footer-nav li::before {
+
+    content: "\00BB";
+}
 
 
-
-
-
+.contact-address-info {
+    display: flex;
+    color: #bdbaba;
+    font-size: 0.95rem;
+    font-weight: 600;
 
 }
+
+
+
+
+
+
+
+
+
+ul.footer-nav.address li:before {
+
+    color: #0acaec;
+    content: "\f015";
+
+}
+
+
+
 
 .footer-nav li a {
 
-    text-decoration: none;
-
-    float: left;
-    display: block;
-    width: 100%;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: .95rem;
-    padding: .35rem 1rem .35rem 1rem;
-    font-weight: 500;
-    border-top: .095rem solid #0acaec;
-
-
-
-
+    color: #bdbaba;
+    font-size: 0.95rem;
 
 }
 
 .footer-nav li a:hover {
-    background-color: #0acaec;
-    color: #fff;
+
+    color: #0acaec;
+    font-weight: bold;
+
 }
+
+
 
 .fas {
 
     color: #fff;
-    background-color: rgb(66, 165, 253);
+    background-color: #10B2EE;
     /* Color Code -#42A5FD */
     border-radius: 50%;
     padding: .4rem;
@@ -289,19 +306,70 @@ a {
 
 
 
+ul.breadcrumbstyle {
+    text-align: center;
+    padding: 10px 16px;
+    list-style: none;
+
+
+
+}
+
+ul.breadcrumbstyle li {
+    display: inline;
+    font-size: 1rem;
+
+
+
+}
+
+ul.breadcrumbstyle li+li:before {
+    padding: 0.35rem;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumbstyle li a {
+    color: rgb(66, 165, 253);
+    text-decoration: none;
+}
+
+ul.breadcrumbstyle li a:hover {
+    color: rgb(66, 219, 253);
+
+
+}
+
+
+
 
 .copyright-bottom {
-    background-color: rgba(0, 0, 0);
+    border-top: .9px solid #bdbaba;
+
     /* Color Code -#42A5FD */
-    color: #fff;
+    color: #bdbaba;
 }
 
 .footer-section {
     position: relative;
-    background-color: #0000000a;
+    background-color: rgba(3, 30, 52, 0.92);
     padding-top: 5.5rem;
     margin-top: -3rem;
+}
 
+.top-header {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    background-color: rgba(3, 30, 52, 0.92);
+    padding: 0.65rem;
+    color: #fff;
+}
+
+.top-header .social-media-links {
+    float: right;
 }
 
 
@@ -309,7 +377,6 @@ a {
 
 
     background-color: #2edbd077;
-    ;
 
     width: 100%;
 
@@ -371,11 +438,6 @@ a {
 }
 
 
-
-.breadcrumb {
-    font-size: 1.6rem;
-
-}
 
 .form-group {
     margin: .5rem;
@@ -513,65 +575,21 @@ a {
 }
 
 
-.dropdown-item {
-    width: 15rem;
-    padding: .6rem 1rem 0 .6rem;
-    font-size: 1.1rem;
-
-}
-
-
-.dropdown-menu {
-    border: none;
-    border-radius: 0;
-}
-
-.nav-link,
-.dropdown-item {
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: rgb(66, 165, 253);
-
-
-}
 
 
 
-.nav-item a:hover {
 
-    color: rgb(234, 66, 71);
-    font-size: 1.2rem;
-    font-weight: 600;
-}
 
-.navbar-nav .nav-link.active,
-.navbar-nav .show>.nav-link {
-    color: rgb(234, 66, 71);
-}
+
+
+
 
 .banner-paragraph {
     font-size: 1.25rem;
 
 }
 
-.custom-btn-search {
-    background-color: rgb(234, 66, 71);
-    color: #fff;
-}
 
-.custom-btn-search:hover {
-    background-color: rgb(66, 165, 253);
-    color: rgb(234, 66, 71);
-}
-
-.search-input {
-    border: none;
-    margin-right: -40px;
-    width: 20rem;
-    background-color: #F8F8F8;
-    border-radius: none;
-
-}
 
 .banner-logo {
 
@@ -618,7 +636,7 @@ a {
 }
 
 .title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: rgb(10, 212, 239);
     font-family: 'Fs Albert Arabic Bold';
 }
@@ -650,7 +668,7 @@ a {
 
 .states-list-map ul li {
     list-style: none;
-    font-size: .75rem;
+    font-size: 1.5rem;
     padding: .2rem;
     font-weight: 400;
     margin: .1rem;
@@ -932,7 +950,7 @@ a {
 .fas {
     padding: .25rem;
 
-    background-color: #0acaec;
+    background-color: #10B2EE;
     color: white;
     border-radius: .5rem;
 
@@ -952,10 +970,7 @@ a {
 
 
 .footer-section .social-media-links {
+
     padding: .75rem 0 .75rem 0;
-    border-top: .5px solid #2EA2DB;
-    border-bottom: .5px solid #2EA2DB;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 1rem;
+
 }

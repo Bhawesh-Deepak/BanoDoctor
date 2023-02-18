@@ -20,7 +20,9 @@ namespace BanoDoctor.Admin.UI
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>().UseKestrel(option=> {
+                        option.Limits.MaxRequestBodySize = long.MaxValue;
+                    }).UseIIS();
                 });
     }
 }

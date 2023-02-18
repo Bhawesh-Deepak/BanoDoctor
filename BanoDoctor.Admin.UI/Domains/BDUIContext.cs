@@ -15,5 +15,8 @@ namespace BanoDoctor.Admin.UI.Domains
 
         public virtual DbSet<InquiryModel> InquiryModel { get; set; }
         public virtual DbSet<BlogDetails> BlogDetails { get; set; }
+        public virtual DbSet<CourseDetail> CourseDetails { get; set; }
+        public virtual DbSet<CandidateDetailModel> CandidateDetailModels { get; set; }
+        public virtual DbSet<UserModel> UserModels { get; set; }
     }
 }

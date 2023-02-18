@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -14,5 +15,13 @@ namespace BanoDoctor.Admin.UI.Domains
         public string Heading { get; set; }
         public string BlogDescription { get; set; }
         public bool Ispublished { get; set; }
+        public string MetaTitle { get; set; }
+        public string MetaDescription { get; set; }
+        public string MetaKeywords { get; set; }
+        public string MetaLink { get; set; }
+        public string ImagePath { get; set; }
+        public string ImageAltTage { get; set; }
+        [NotMapped]
+        public IFormFile UploadImage { get; set; }
     }
 }

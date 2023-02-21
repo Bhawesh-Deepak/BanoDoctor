@@ -974,3 +974,75 @@ ul.breadcrumbstyle li a:hover {
     padding: .75rem 0 .75rem 0;
 
 }
+
+.md-courses,
+.ms-courses {
+    text-align: center;
+    background-color: #2EA2DB;
+    color: #fff;
+    padding: .5rem;
+    border-bottom: 2px solid rgb(244, 245, 245);
+
+
+}
+
+.md-courses:before {
+    content: "MD Specialization";
+    display: block;
+    border-bottom: 2px solid rgb(244, 245, 245);
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(236, 243, 160);
+}
+
+.ms-courses:before {
+    content: "MS Specialization";
+    display: block;
+    color: rgb(236, 243, 160);
+    border-bottom: 2px solid rgb(244, 245, 245);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.list-item-point-thumb-right {
+    list-style: none;
+
+
+}
+
+.list-item-point-thumb-right li {
+    font-size: 1.025rem;
+    color: #0d0d0d;
+}
+
+.admission-steps {
+    background-color: #0acaec;
+    color: #fff;
+    padding: 1rem;
+
+
+}
+
+.admission-steps-list {
+    display: flex;
+
+}
+
+.admission-steps-list div+div.admission-steps::before {
+    display: inline;
+    content: "\2192";
+    font-weight: 900;
+    padding-right: .5rem;
+
+
+}
+
+
+
+
+ul.list-item-point-thumb-right li::before {
+    content: "\261E";
+    font-size: 1.5rem;
+    color: #0aecbbda;
+    padding-right: .5rem;
+}
